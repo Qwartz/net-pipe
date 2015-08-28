@@ -63,6 +63,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>File&#160;List</span></a></li>
+      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
     </ul>
   </div>
 <!-- window showing the filter options -->
@@ -87,11 +88,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
+<a href="#func-members">Functions</a> &#124;
 <a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
 <div class="title">pipe.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Network piping code.  
+<a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
 </div>
 <p><a href="pipe_8h_source.html">Go to the source code of this file.</a></p>
@@ -102,15 +107,77 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is used to define different sizes of network pipe.  <a href="structpipe__sizes.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:ad30fd987140b7a87762cca868a016449"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pipe_8h.html#ad30fd987140b7a87762cca868a016449">has_precondition</a> (unsigned int *cond, const char mcmd[])</td></tr>
+<tr class="memdesc:ad30fd987140b7a87762cca868a016449"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks for precondition code.  <a href="#ad30fd987140b7a87762cca868a016449">More...</a><br /></td></tr>
+<tr class="separator:ad30fd987140b7a87762cca868a016449"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:a59001cc7ce9981a744513d3b1da6f2e0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a59001cc7ce9981a744513d3b1da6f2e0"></a>
-struct <a class="el" href="structpipe__sizes.html">pipe_sizes</a>&#160;</td><td class="memItemRight" valign="bottom"><b>pipe_t</b></td></tr>
+<tr class="memitem:a59001cc7ce9981a744513d3b1da6f2e0"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structpipe__sizes.html">pipe_sizes</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pipe_8h.html#a59001cc7ce9981a744513d3b1da6f2e0">pipe_t</a></td></tr>
 <tr class="separator:a59001cc7ce9981a744513d3b1da6f2e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><dl class="section version"><dt>Version</dt><dd>1.0 </dd></dl>
-</div></div><!-- contents -->
+<div class="textblock"><p>Network piping code. </p>
+<p>This file contains all code related to network piping and network packet creation </p><dl class="section author"><dt>Author</dt><dd>Corbin Matschull </dd></dl>
+<dl class="section version"><dt>Version</dt><dd>1.1r2 </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>Aug 28. 2015 </dd></dl>
+<dl class="section pre"><dt>Precondition</dt><dd>Make sure you have run ./configure with all options chosen </dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>File with throw errors if run outside of GCC or LLVM/Clang </dd></dl>
+<dl class="section copyright"><dt>Copyright</dt><dd>Apache Version 2 </dd></dl>
+</div><h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="ad30fd987140b7a87762cca868a016449"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void has_precondition </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int *&#160;</td>
+          <td class="paramname"><em>cond</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char&#160;</td>
+          <td class="paramname"><em>mcmd</em>[]&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Checks for precondition code. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cond</td><td>- What condition is this being run under? </td></tr>
+    <tr><td class="paramname">mcmd[]</td><td>- Command to be run</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Nothing </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a class="anchor" id="a59001cc7ce9981a744513d3b1da6f2e0"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct <a class="el" href="structpipe__sizes.html">pipe_sizes</a>  pipe_t</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>&lt; Typename for <a class="el" href="structpipe__sizes.html" title="This is used to define different sizes of network pipe. ">pipe_sizes</a> </p>
+
+</div>
+</div>
+</div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

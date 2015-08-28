@@ -1,20 +1,78 @@
 \hypertarget{pipe_8h}{}\section{src/include/pipe.h File Reference}
 \label{pipe_8h}\index{src/include/pipe.\+h@{src/include/pipe.\+h}}
+
+
+Network piping code.  
+
+
 {\ttfamily \#include $<$stdio.\+h$>$}\\*
 \subsection*{Classes}
 \begin{DoxyCompactItemize}
 \item 
 struct \hyperlink{structpipe__sizes}{pipe\+\_\+sizes}
 \begin{DoxyCompactList}\small\item\em This is used to define different sizes of network pipe. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{pipe_8h_ad30fd987140b7a87762cca868a016449}{has\+\_\+precondition} (unsigned int $\ast$cond, const char mcmd\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Checks for precondition code. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
-struct \hyperlink{structpipe__sizes}{pipe\+\_\+sizes} {\bfseries pipe\+\_\+t}\hypertarget{pipe_8h_a59001cc7ce9981a744513d3b1da6f2e0}{}\label{pipe_8h_a59001cc7ce9981a744513d3b1da6f2e0}
-
+struct \hyperlink{structpipe__sizes}{pipe\+\_\+sizes} \hyperlink{pipe_8h_a59001cc7ce9981a744513d3b1da6f2e0}{pipe\+\_\+t}
 \end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
+Network piping code. 
+
+This file contains all code related to network piping and network packet creation \begin{DoxyAuthor}{Author}
+Corbin Matschull 
+\end{DoxyAuthor}
 \begin{DoxyVersion}{Version}
-1.\+0 
+1.\+1r2 
 \end{DoxyVersion}
+\begin{DoxyDate}{Date}
+Aug 28. 2015 
+\end{DoxyDate}
+\begin{DoxyPrecond}{Precondition}
+Make sure you have run ./configure with all options chosen 
+\end{DoxyPrecond}
+\begin{DoxyWarning}{Warning}
+File with throw errors if run outside of G\+CC or L\+L\+V\+M/\+Clang 
+\end{DoxyWarning}
+\begin{DoxyCopyright}{Copyright}
+Apache Version 2 
+\end{DoxyCopyright}
+
+
+\subsection{Function Documentation}
+\index{pipe.\+h@{pipe.\+h}!has\+\_\+precondition@{has\+\_\+precondition}}
+\index{has\+\_\+precondition@{has\+\_\+precondition}!pipe.\+h@{pipe.\+h}}
+\subsubsection[{has\+\_\+precondition(unsigned int $\ast$cond, const char mcmd[])}]{\setlength{\rightskip}{0pt plus 5cm}void has\+\_\+precondition (
+\begin{DoxyParamCaption}
+\item[{unsigned int $\ast$}]{cond, }
+\item[{const char}]{mcmd\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}\hypertarget{pipe_8h_ad30fd987140b7a87762cca868a016449}{}\label{pipe_8h_ad30fd987140b7a87762cca868a016449}
+
+
+Checks for precondition code. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cond} & -\/ What condition is this being run under? \\
+\hline
+{\em mcmd\mbox{[}$\,$\mbox{]}} & -\/ Command to be run\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing 
+\end{DoxyReturn}
+
+
+\subsection{Variable Documentation}
+\index{pipe.\+h@{pipe.\+h}!pipe\+\_\+t@{pipe\+\_\+t}}
+\index{pipe\+\_\+t@{pipe\+\_\+t}!pipe.\+h@{pipe.\+h}}
+\subsubsection[{pipe\+\_\+t}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf pipe\+\_\+sizes}  pipe\+\_\+t}\hypertarget{pipe_8h_a59001cc7ce9981a744513d3b1da6f2e0}{}\label{pipe_8h_a59001cc7ce9981a744513d3b1da6f2e0}
+$<$ Typename for \hyperlink{structpipe__sizes}{pipe\+\_\+sizes} 
