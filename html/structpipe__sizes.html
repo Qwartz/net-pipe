@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.11"/>
-<title>net-pipe: src Directory Reference</title>
+<title>net-pipe: pipe_sizes Struct Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -40,7 +40,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
-      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
@@ -60,6 +60,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       </li>
     </ul>
   </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>Class&#160;List</span></a></li>
+      <li><a href="classes.html"><span>Class&#160;Index</span></a></li>
+    </ul>
+  </div>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -74,22 +80,46 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
-</div>
 </div><!-- top -->
 <div class="header">
+  <div class="summary">
+<a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="structpipe__sizes-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">src Directory Reference</div>  </div>
+<div class="title">pipe_sizes Struct Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>This is used to define different sizes of network pipe.  
+ <a href="structpipe__sizes.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="pipe_8h_source.html">pipe.h</a>&gt;</code></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="subdirs"></a>
-Directories</h2></td></tr>
-<tr class="memitem:dir_b0856f6b0d80ccb263b2f415c91f9e17"><td class="memItemLeft" align="right" valign="top">directory &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dir_b0856f6b0d80ccb263b2f415c91f9e17.html">include</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:ad45fbc171dd7dc906819db3662f01912"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad45fbc171dd7dc906819db3662f01912"></a>
+unsigned short&#160;</td><td class="memItemRight" valign="bottom"><b>pipe16_t</b></td></tr>
+<tr class="separator:ad45fbc171dd7dc906819db3662f01912"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e62f43829e6cc2027e8ebfcfde43fc2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5e62f43829e6cc2027e8ebfcfde43fc2"></a>
+unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>pipe32_t</b></td></tr>
+<tr class="separator:a5e62f43829e6cc2027e8ebfcfde43fc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a442e035eb8f5cbc6a674ca3737bd938f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a442e035eb8f5cbc6a674ca3737bd938f"></a>
+unsigned long&#160;</td><td class="memItemRight" valign="bottom"><b>pipe64_t</b></td></tr>
+<tr class="separator:a442e035eb8f5cbc6a674ca3737bd938f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>This is used to define different sizes of network pipe. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pipe16_t</td><td>- 16-Bit pipe (max of 32-Bits per packet) </td></tr>
+    <tr><td class="paramname">pipe32_t</td><td>- 32-Bit pipe (max of 64-Bits per packet) </td></tr>
+    <tr><td class="paramname">pipe64_t</td><td>- 64-Bit pipe (max of 128-Bits per packet) </td></tr>
+  </table>
+  </dd>
+</dl>
+</div><hr/>The documentation for this struct was generated from the following file:<ul>
+<li>src/include/<a class="el" href="pipe_8h_source.html">pipe.h</a></li>
+</ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
