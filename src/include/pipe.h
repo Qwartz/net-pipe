@@ -50,4 +50,8 @@ void has_precondition(unsigned int *cond, const char mcmd[]);
  */
 int has_code_check(int proc_id, pipe_sizes *psize);
 
+int has_no_precheck(int check);
+
+int has_crc();
+
 #endif
