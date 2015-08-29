@@ -54,4 +54,6 @@ int has_no_precheck(int check);
 
 int has_crc();
 
+void delete_crc();
+
 #endif
