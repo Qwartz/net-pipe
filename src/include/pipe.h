@@ -27,7 +27,7 @@ struct pipe_sizes
     unsigned short pipe16_t; /**< 16-bit pipe (max of 32-Bit packet size)*/
     unsigned int   pipe32_t; /**< 32-Bit pipe (max of 64-Bit packet size)*/
     unsigned long  pipe64_t; /**< 64-Bit pipe (max of 128-Bit packet size)*/
-} pipe_t /**< Typename for pipe_sizes */;
+} pipe_t ; /**< Typename for pipe_sizes */
 
 /**
  * \brief Checks for precondition code
@@ -50,10 +50,22 @@ void has_precondition(unsigned int *cond, const char mcmd[]);
  */
 int has_code_check(int proc_id, pipe_sizes *psize);
 
+/**
+ * \brief Check for CRC precheck
+ *
+ * \param check - int value to sign the check with
+ *
+ * \return precheck hash
+ */
 int has_no_precheck(int check);
 
-int has_crc();
-
-void delete_crc();
+/**
+ * \brief Delete CRC sign
+ *
+ * \param check - Check sign
+ *
+ * \return Nothing
+ */
+void delete_crc(int *check);
 
 #endif
