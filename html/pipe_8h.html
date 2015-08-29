@@ -24,7 +24,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">net-pipe
-   &#160;<span id="projectnumber">0.0.1r1</span>
+   &#160;<span id="projectnumber">0.0.1r2</span>
    </div>
    <div id="projectbrief">A crayon stupid style network piping server.</div>
   </td>
@@ -88,6 +88,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
+<a href="#define-members">Macros</a> &#124;
 <a href="#func-members">Functions</a> &#124;
 <a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
@@ -107,11 +108,21 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is used to define different sizes of network pipe.  <a href="structpipe__sizes.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a2ce1a5559de50c7a1de29a1517f0d223"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2ce1a5559de50c7a1de29a1517f0d223"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pipe_8h.html#a2ce1a5559de50c7a1de29a1517f0d223">MAX_PIPE_OUTFLOW</a>&#160;&#160;&#160;1024</td></tr>
+<tr class="memdesc:a2ce1a5559de50c7a1de29a1517f0d223"><td class="mdescLeft">&#160;</td><td class="mdescRight">Global for maximum number of bit outflow through network pipe. <br /></td></tr>
+<tr class="separator:a2ce1a5559de50c7a1de29a1517f0d223"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:ad30fd987140b7a87762cca868a016449"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pipe_8h.html#ad30fd987140b7a87762cca868a016449">has_precondition</a> (unsigned int *cond, const char mcmd[])</td></tr>
 <tr class="memdesc:ad30fd987140b7a87762cca868a016449"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks for precondition code.  <a href="#ad30fd987140b7a87762cca868a016449">More...</a><br /></td></tr>
 <tr class="separator:ad30fd987140b7a87762cca868a016449"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5916782906bdb6aa8c91f10c5cbba55d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pipe_8h.html#a5916782906bdb6aa8c91f10c5cbba55d">has_code_check</a> (int proc_id, <a class="el" href="structpipe__sizes.html">pipe_sizes</a> *psize)</td></tr>
+<tr class="memdesc:a5916782906bdb6aa8c91f10c5cbba55d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if current pipe has checking in current process.  <a href="#a5916782906bdb6aa8c91f10c5cbba55d">More...</a><br /></td></tr>
+<tr class="separator:a5916782906bdb6aa8c91f10c5cbba55d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
@@ -127,6 +138,42 @@ Variables</h2></td></tr>
 <dl class="section warning"><dt>Warning</dt><dd>File with throw errors if run outside of GCC or LLVM/Clang </dd></dl>
 <dl class="section copyright"><dt>Copyright</dt><dd>Apache Version 2 </dd></dl>
 </div><h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="a5916782906bdb6aa8c91f10c5cbba55d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int has_code_check </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>proc_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structpipe__sizes.html">pipe_sizes</a> *&#160;</td>
+          <td class="paramname"><em>psize</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Checks if current pipe has checking in current process. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">proc_id</td><td>- Current Process ID </td></tr>
+    <tr><td class="paramname">psize</td><td>- Pipe size</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>1 if process has check, 0 if process does not have check </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="ad30fd987140b7a87762cca868a016449"></a>
 <div class="memitem">
 <div class="memproto">

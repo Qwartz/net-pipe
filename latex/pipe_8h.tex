@@ -11,11 +11,19 @@ Network piping code.
 \item 
 struct \hyperlink{structpipe__sizes}{pipe\+\_\+sizes}
 \begin{DoxyCompactList}\small\item\em This is used to define different sizes of network pipe. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{pipe_8h_a2ce1a5559de50c7a1de29a1517f0d223}{M\+A\+X\+\_\+\+P\+I\+P\+E\+\_\+\+O\+U\+T\+F\+L\+OW}~1024\hypertarget{pipe_8h_a2ce1a5559de50c7a1de29a1517f0d223}{}\label{pipe_8h_a2ce1a5559de50c7a1de29a1517f0d223}
+
+\begin{DoxyCompactList}\small\item\em Global for maximum number of bit outflow through network pipe. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
 void \hyperlink{pipe_8h_ad30fd987140b7a87762cca868a016449}{has\+\_\+precondition} (unsigned int $\ast$cond, const char mcmd\mbox{[}$\,$\mbox{]})
-\begin{DoxyCompactList}\small\item\em Checks for precondition code. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Checks for precondition code. \end{DoxyCompactList}\item 
+int \hyperlink{pipe_8h_a5916782906bdb6aa8c91f10c5cbba55d}{has\+\_\+code\+\_\+check} (int proc\+\_\+id, \hyperlink{structpipe__sizes}{pipe\+\_\+sizes} $\ast$psize)
+\begin{DoxyCompactList}\small\item\em Checks if current pipe has checking in current process. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
@@ -47,6 +55,28 @@ Apache Version 2
 
 
 \subsection{Function Documentation}
+\index{pipe.\+h@{pipe.\+h}!has\+\_\+code\+\_\+check@{has\+\_\+code\+\_\+check}}
+\index{has\+\_\+code\+\_\+check@{has\+\_\+code\+\_\+check}!pipe.\+h@{pipe.\+h}}
+\subsubsection[{has\+\_\+code\+\_\+check(int proc\+\_\+id, pipe\+\_\+sizes $\ast$psize)}]{\setlength{\rightskip}{0pt plus 5cm}int has\+\_\+code\+\_\+check (
+\begin{DoxyParamCaption}
+\item[{int}]{proc\+\_\+id, }
+\item[{{\bf pipe\+\_\+sizes} $\ast$}]{psize}
+\end{DoxyParamCaption}
+)}\hypertarget{pipe_8h_a5916782906bdb6aa8c91f10c5cbba55d}{}\label{pipe_8h_a5916782906bdb6aa8c91f10c5cbba55d}
+
+
+Checks if current pipe has checking in current process. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em proc\+\_\+id} & -\/ Current Process ID \\
+\hline
+{\em psize} & -\/ Pipe size\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 if process has check, 0 if process does not have check 
+\end{DoxyReturn}
 \index{pipe.\+h@{pipe.\+h}!has\+\_\+precondition@{has\+\_\+precondition}}
 \index{has\+\_\+precondition@{has\+\_\+precondition}!pipe.\+h@{pipe.\+h}}
 \subsubsection[{has\+\_\+precondition(unsigned int $\ast$cond, const char mcmd[])}]{\setlength{\rightskip}{0pt plus 5cm}void has\+\_\+precondition (

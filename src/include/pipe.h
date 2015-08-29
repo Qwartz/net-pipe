@@ -14,9 +14,13 @@
 
 #include <stdio.h>
 
+/**
+ * @brief Global for maximum number of bit outflow through network pipe
+ */
+#define MAX_PIPE_OUTFLOW 1024
 
 /**
- * @brief This is used to define different sizes of network pipe.
+ * \brief This is used to define different sizes of network pipe.
  */
 struct pipe_sizes
 {
@@ -26,13 +30,24 @@ struct pipe_sizes
 } pipe_t /**< Typename for pipe_sizes */;
 
 /**
- * @brief Checks for precondition code
+ * \brief Checks for precondition code
  *
- * @param cond - What condition is this being run under?
- * @param mcmd[] - Command to be run
+ * \param cond - What condition is this being run under?
+ * \param mcmd[] - Command to be run
  *
- * @return Nothing
+ * \return Nothing
  *
  */
 void has_precondition(unsigned int *cond, const char mcmd[]);
+
+/**
+ * \brief Checks if current pipe has checking in current process
+ *
+ * \param proc_id - Current Process ID
+ * \param psize - Pipe size
+ *
+ * \return 1 if process has check, 0 if process does not have check
+ */
+int has_code_check(int proc_id, pipe_sizes *psize);
+
 #endif
