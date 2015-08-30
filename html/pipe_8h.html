@@ -89,6 +89,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#define-members">Macros</a> &#124;
+<a href="#enum-members">Enumerations</a> &#124;
 <a href="#func-members">Functions</a> &#124;
 <a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
@@ -115,6 +116,16 @@ Macros</h2></td></tr>
 <tr class="memdesc:a2ce1a5559de50c7a1de29a1517f0d223"><td class="mdescLeft">&#160;</td><td class="mdescRight">Global for maximum number of bit outflow through network pipe. <br /></td></tr>
 <tr class="separator:a2ce1a5559de50c7a1de29a1517f0d223"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:abb56c43c72a7ee76f8a0227b8fd668f9"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pipe_8h.html#abb56c43c72a7ee76f8a0227b8fd668f9">STACK_DRIVERS</a> { <b>STACK_CALL_FROM_NULL</b> = 0x1C, 
+<b>STACK_CALL_HAS_NO_DRIVER</b> = 0x2C, 
+<b>STACK_CALL_HAS_FORCED_DRIVER</b> = 0x3C, 
+<b>STACK_CALL_HAS_EXPLICIT_DRIVER</b> = 04C
+ }<tr class="memdesc:abb56c43c72a7ee76f8a0227b8fd668f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Driver flags.  <a href="pipe_8h.html#abb56c43c72a7ee76f8a0227b8fd668f9">More...</a><br /></td></tr>
+<tr class="separator:abb56c43c72a7ee76f8a0227b8fd668f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:ad30fd987140b7a87762cca868a016449"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pipe_8h.html#ad30fd987140b7a87762cca868a016449">has_precondition</a> (unsigned int *cond, const char mcmd[])</td></tr>
@@ -134,6 +145,8 @@ Functions</h2></td></tr>
 Variables</h2></td></tr>
 <tr class="memitem:a59001cc7ce9981a744513d3b1da6f2e0"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structpipe__sizes.html">pipe_sizes</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pipe_8h.html#a59001cc7ce9981a744513d3b1da6f2e0">pipe_t</a></td></tr>
 <tr class="separator:a59001cc7ce9981a744513d3b1da6f2e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a855464a5606e1eec9b11be99f6bc8a45"><td class="memItemLeft" align="right" valign="top">enum <a class="el" href="pipe_8h.html#abb56c43c72a7ee76f8a0227b8fd668f9">STACK_DRIVERS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pipe_8h.html#a855464a5606e1eec9b11be99f6bc8a45">STACKD_T</a></td></tr>
+<tr class="separator:a855464a5606e1eec9b11be99f6bc8a45"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Network piping code. </p>
@@ -143,7 +156,32 @@ Variables</h2></td></tr>
 <dl class="section pre"><dt>Precondition</dt><dd>Make sure you have run ./configure with all options chosen </dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>File with throw errors if run outside of GCC or LLVM/Clang </dd></dl>
 <dl class="section copyright"><dt>Copyright</dt><dd>Apache Version 2 </dd></dl>
-</div><h2 class="groupheader">Function Documentation</h2>
+</div><h2 class="groupheader">Enumeration Type Documentation</h2>
+<a class="anchor" id="abb56c43c72a7ee76f8a0227b8fd668f9"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="pipe_8h.html#abb56c43c72a7ee76f8a0227b8fd668f9">STACK_DRIVERS</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Driver flags. </p>
+<p>This contains all flags used for driver deletion and creation</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">STACK_CALL_FROM_NULL</td><td>- Throw in cases of the stack trying to return a null component or variable </td></tr>
+    <tr><td class="paramname">STACK_CALL_HAS_NO_DRIVER</td><td>- Throw in cases of trying to load a null or missing driver </td></tr>
+    <tr><td class="paramname">STACK_CALL_FORCED_DRIVER</td><td>- Forces driver to load under all circumstances </td></tr>
+    <tr><td class="paramname">STACK_HAS_EXPLICIT_DRIVER</td><td>- Uses driver under an explicit circumstance. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
 <a class="anchor" id="acb47efcaf1c1091f225577b7c42b4815"></a>
 <div class="memitem">
 <div class="memproto">
@@ -162,6 +200,12 @@ Variables</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">check</td><td>- Check sign</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">HAS_NO_CRC_CHECK_ERROR</td><td></td></tr>
   </table>
   </dd>
 </dl>
@@ -226,6 +270,12 @@ Variables</h2></td></tr>
   </table>
   </dd>
 </dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">HAS_NO_CRC_CHECK_ERROR</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
 <dl class="section return"><dt>Returns</dt><dd>precheck hash </dd></dl>
 
 </div>
@@ -277,6 +327,19 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Typename for <a class="el" href="structpipe__sizes.html" title="This is used to define different sizes of network pipe. ">pipe_sizes</a> </p>
+
+</div>
+</div>
+<a class="anchor" id="a855464a5606e1eec9b11be99f6bc8a45"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="pipe_8h.html#abb56c43c72a7ee76f8a0227b8fd668f9">STACK_DRIVERS</a>  STACKD_T</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Typename variable for STACK_DRIVERS </p>
 
 </div>
 </div>

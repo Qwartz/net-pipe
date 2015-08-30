@@ -30,6 +30,24 @@ struct pipe_sizes
 } pipe_t ; /**< Typename for pipe_sizes */
 
 /**
+ * \brief Driver flags
+ * \details This contains all flags used for driver deletion and creation
+ *
+ * \param STACK_CALL_FROM_NULL - Throw in cases of the stack trying to return a null component or variable
+ * \param STACK_CALL_HAS_NO_DRIVER - Throw in cases of trying to load a null or missing driver
+ * \param STACK_CALL_FORCED_DRIVER - Forces driver to load under all circumstances
+ * \param STACK_HAS_EXPLICIT_DRIVER - Uses driver under an explicit circumstance.
+ *
+ */
+enum STACK_DRIVERS
+{
+    STACK_CALL_FROM_NULL = 0x1C,
+    STACK_CALL_HAS_NO_DRIVER = 0x2C,
+    STACK_CALL_HAS_FORCED_DRIVER = 0x3C,
+    STACK_CALL_HAS_EXPLICIT_DRIVER = 04C
+} STACKD_T; /**< Typename variable for STACK_DRIVERS */
+
+/**
  * \brief Checks for precondition code
  *
  * \param cond - What condition is this being run under?
@@ -55,6 +73,8 @@ int has_code_check(int proc_id, pipe_sizes *psize);
  *
  * \param check - int value to sign the check with
  *
+ * \throw HAS_NO_CRC_CHECK_ERROR
+ *
  * \return precheck hash
  */
 int has_no_precheck(int check);
@@ -63,6 +83,8 @@ int has_no_precheck(int check);
  * \brief Delete CRC sign
  *
  * \param check - Check sign
+ *
+ * \throw HAS_NO_CRC_CHECK_ERROR
  *
  * \return Nothing
  */

@@ -17,6 +17,15 @@ struct \hyperlink{structpipe__sizes}{pipe\+\_\+sizes}
 \hypertarget{pipe_8h_a2ce1a5559de50c7a1de29a1517f0d223}{}\#define \hyperlink{pipe_8h_a2ce1a5559de50c7a1de29a1517f0d223}{M\+A\+X\+\_\+\+P\+I\+P\+E\+\_\+\+O\+U\+T\+F\+L\+O\+W}~1024\label{pipe_8h_a2ce1a5559de50c7a1de29a1517f0d223}
 
 \begin{DoxyCompactList}\small\item\em Global for maximum number of bit outflow through network pipe. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{pipe_8h_abb56c43c72a7ee76f8a0227b8fd668f9}{S\+T\+A\+C\+K\+\_\+\+D\+R\+I\+V\+E\+R\+S} \{ {\bfseries S\+T\+A\+C\+K\+\_\+\+C\+A\+L\+L\+\_\+\+F\+R\+O\+M\+\_\+\+N\+U\+L\+L} = 0x1\+C, 
+{\bfseries S\+T\+A\+C\+K\+\_\+\+C\+A\+L\+L\+\_\+\+H\+A\+S\+\_\+\+N\+O\+\_\+\+D\+R\+I\+V\+E\+R} = 0x2\+C, 
+{\bfseries S\+T\+A\+C\+K\+\_\+\+C\+A\+L\+L\+\_\+\+H\+A\+S\+\_\+\+F\+O\+R\+C\+E\+D\+\_\+\+D\+R\+I\+V\+E\+R} = 0x3\+C, 
+{\bfseries S\+T\+A\+C\+K\+\_\+\+C\+A\+L\+L\+\_\+\+H\+A\+S\+\_\+\+E\+X\+P\+L\+I\+C\+I\+T\+\_\+\+D\+R\+I\+V\+E\+R} = 04\+C
+ \}\begin{DoxyCompactList}\small\item\em Driver flags. \end{DoxyCompactList}
+\end{DoxyCompactItemize}
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -32,6 +41,8 @@ void \hyperlink{pipe_8h_acb47efcaf1c1091f225577b7c42b4815}{delete\+\_\+crc} (int
 \begin{DoxyCompactItemize}
 \item 
 struct \hyperlink{structpipe__sizes}{pipe\+\_\+sizes} \hyperlink{pipe_8h_a59001cc7ce9981a744513d3b1da6f2e0}{pipe\+\_\+t}
+\item 
+enum \hyperlink{pipe_8h_abb56c43c72a7ee76f8a0227b8fd668f9}{S\+T\+A\+C\+K\+\_\+\+D\+R\+I\+V\+E\+R\+S} \hyperlink{pipe_8h_a855464a5606e1eec9b11be99f6bc8a45}{S\+T\+A\+C\+K\+D\+\_\+\+T}
 \end{DoxyCompactItemize}
 
 
@@ -58,6 +69,29 @@ Apache Version 2
 \end{DoxyCopyright}
 
 
+\subsection{Enumeration Type Documentation}
+\hypertarget{pipe_8h_abb56c43c72a7ee76f8a0227b8fd668f9}{}\index{pipe.\+h@{pipe.\+h}!S\+T\+A\+C\+K\+\_\+\+D\+R\+I\+V\+E\+R\+S@{S\+T\+A\+C\+K\+\_\+\+D\+R\+I\+V\+E\+R\+S}}
+\index{S\+T\+A\+C\+K\+\_\+\+D\+R\+I\+V\+E\+R\+S@{S\+T\+A\+C\+K\+\_\+\+D\+R\+I\+V\+E\+R\+S}!pipe.\+h@{pipe.\+h}}
+\subsubsection[{S\+T\+A\+C\+K\+\_\+\+D\+R\+I\+V\+E\+R\+S}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf S\+T\+A\+C\+K\+\_\+\+D\+R\+I\+V\+E\+R\+S}}\label{pipe_8h_abb56c43c72a7ee76f8a0227b8fd668f9}
+
+
+Driver flags. 
+
+This contains all flags used for driver deletion and creation
+
+
+\begin{DoxyParams}{Parameters}
+{\em S\+T\+A\+C\+K\+\_\+\+C\+A\+L\+L\+\_\+\+F\+R\+O\+M\+\_\+\+N\+U\+L\+L} & -\/ Throw in cases of the stack trying to return a null component or variable \\
+\hline
+{\em S\+T\+A\+C\+K\+\_\+\+C\+A\+L\+L\+\_\+\+H\+A\+S\+\_\+\+N\+O\+\_\+\+D\+R\+I\+V\+E\+R} & -\/ Throw in cases of trying to load a null or missing driver \\
+\hline
+{\em S\+T\+A\+C\+K\+\_\+\+C\+A\+L\+L\+\_\+\+F\+O\+R\+C\+E\+D\+\_\+\+D\+R\+I\+V\+E\+R} & -\/ Forces driver to load under all circumstances \\
+\hline
+{\em S\+T\+A\+C\+K\+\_\+\+H\+A\+S\+\_\+\+E\+X\+P\+L\+I\+C\+I\+T\+\_\+\+D\+R\+I\+V\+E\+R} & -\/ Uses driver under an explicit circumstance. \\
+\hline
+\end{DoxyParams}
+
+
 \subsection{Function Documentation}
 \hypertarget{pipe_8h_acb47efcaf1c1091f225577b7c42b4815}{}\index{pipe.\+h@{pipe.\+h}!delete\+\_\+crc@{delete\+\_\+crc}}
 \index{delete\+\_\+crc@{delete\+\_\+crc}!pipe.\+h@{pipe.\+h}}
@@ -75,6 +109,11 @@ Delete C\+R\+C sign.
 {\em check} & -\/ Check sign\\
 \hline
 \end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em H\+A\+S\+\_\+\+N\+O\+\_\+\+C\+R\+C\+\_\+\+C\+H\+E\+C\+K\+\_\+\+E\+R\+R\+O\+R} & \\
+\hline
+\end{DoxyExceptions}
 \begin{DoxyReturn}{Returns}
 Nothing 
 \end{DoxyReturn}
@@ -116,6 +155,11 @@ Check for C\+R\+C precheck.
 {\em check} & -\/ int value to sign the check with\\
 \hline
 \end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em H\+A\+S\+\_\+\+N\+O\+\_\+\+C\+R\+C\+\_\+\+C\+H\+E\+C\+K\+\_\+\+E\+R\+R\+O\+R} & \\
+\hline
+\end{DoxyExceptions}
 \begin{DoxyReturn}{Returns}
 precheck hash 
 \end{DoxyReturn}
@@ -147,4 +191,7 @@ Nothing
 \hypertarget{pipe_8h_a59001cc7ce9981a744513d3b1da6f2e0}{}\index{pipe.\+h@{pipe.\+h}!pipe\+\_\+t@{pipe\+\_\+t}}
 \index{pipe\+\_\+t@{pipe\+\_\+t}!pipe.\+h@{pipe.\+h}}
 \subsubsection[{pipe\+\_\+t}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf pipe\+\_\+sizes}  pipe\+\_\+t}\label{pipe_8h_a59001cc7ce9981a744513d3b1da6f2e0}
-Typename for \hyperlink{structpipe__sizes}{pipe\+\_\+sizes} 
+Typename for \hyperlink{structpipe__sizes}{pipe\+\_\+sizes} \hypertarget{pipe_8h_a855464a5606e1eec9b11be99f6bc8a45}{}\index{pipe.\+h@{pipe.\+h}!S\+T\+A\+C\+K\+D\+\_\+\+T@{S\+T\+A\+C\+K\+D\+\_\+\+T}}
+\index{S\+T\+A\+C\+K\+D\+\_\+\+T@{S\+T\+A\+C\+K\+D\+\_\+\+T}!pipe.\+h@{pipe.\+h}}
+\subsubsection[{S\+T\+A\+C\+K\+D\+\_\+\+T}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf S\+T\+A\+C\+K\+\_\+\+D\+R\+I\+V\+E\+R\+S}  S\+T\+A\+C\+K\+D\+\_\+\+T}\label{pipe_8h_a855464a5606e1eec9b11be99f6bc8a45}
+Typename variable for S\+T\+A\+C\+K\+\_\+\+D\+R\+I\+V\+E\+R\+S 
