@@ -1,12 +1,13 @@
 var indexSectionsWithContent =
 {
-  0: "cdhmps",
+  0: "bcdhmps",
   1: "cp",
   2: "cp",
-  3: "dh",
+  3: "bdh",
   4: "chps",
-  5: "s",
-  6: "m"
+  5: "cs",
+  6: "c",
+  7: "m"
 };
 
 var indexSectionNames =
@@ -17,7 +18,8 @@ var indexSectionNames =
   3: "functions",
   4: "variables",
   5: "enums",
-  6: "defines"
+  6: "enumvalues",
+  7: "defines"
 };
 
 var indexSectionLabels =
@@ -28,6 +30,7 @@ var indexSectionLabels =
   3: "Functions",
   4: "Variables",
   5: "Enumerations",
-  6: "Macros"
+  6: "Enumerator",
+  7: "Macros"
 };
 

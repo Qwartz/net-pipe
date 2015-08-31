@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.10"/>
-<title>net-pipe: src/include/convars.h File Reference</title>
+<title>net-pipe: src/include/class_assignment.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -87,72 +87,66 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a> &#124;
-<a href="#func-members">Functions</a>  </div>
+<a href="#enum-members">Enumerations</a>  </div>
   <div class="headertitle">
-<div class="title">convars.h File Reference</div>  </div>
+<div class="title">class_assignment.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Command variables.  
+<p>Class assignment for changing internal functions.  
 <a href="#details">More...</a></p>
 
-<p><a href="convars_8h_source.html">Go to the source code of this file.</a></p>
+<p><a href="class__assignment_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
-Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcvar.html">cvar</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used for detailing command variables.  <a href="structcvar.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
-Functions</h2></td></tr>
-<tr class="memitem:a7ad8d1eabaac45a85ee1313a680b97fa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="convars_8h.html#a7ad8d1eabaac45a85ee1313a680b97fa">boost_vars</a> (unsigned bool has_static_boost, <a class="el" href="structcvar.html">cvar</a> *vars)</td></tr>
-<tr class="memdesc:a7ad8d1eabaac45a85ee1313a680b97fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used to boost privs in pipe.  <a href="#a7ad8d1eabaac45a85ee1313a680b97fa">More...</a><br /></td></tr>
-<tr class="separator:a7ad8d1eabaac45a85ee1313a680b97fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:ad92e9cd00161b56a5ecbdafb9f8dc79f"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class__assignment_8h.html#ad92e9cd00161b56a5ecbdafb9f8dc79f">CLASS_ASSIGNMENTS</a> { <a class="el" href="class__assignment_8h.html#ad92e9cd00161b56a5ecbdafb9f8dc79fa54b000a5f0fbf882206114794e539a6d">CLASS_FORCE_ASSIGNMENT</a> = 0, 
+<a class="el" href="class__assignment_8h.html#ad92e9cd00161b56a5ecbdafb9f8dc79fac42907f65258f3b488a9177585b486c5">CLASS_HAS_NO_ASSIGNMENT</a>, 
+<a class="el" href="class__assignment_8h.html#ad92e9cd00161b56a5ecbdafb9f8dc79fa4cb7005b055f42b91a888b5ee65c9095">CLASS_KEEPS_ASSIGNMENT</a>, 
+<a class="el" href="class__assignment_8h.html#ad92e9cd00161b56a5ecbdafb9f8dc79faf46794666b45af45f3267392d7bdf0d1">CLASS_DUMP_ASSIGNMENT</a>
+ }<tr class="memdesc:ad92e9cd00161b56a5ecbdafb9f8dc79f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class assignment flags.  <a href="class__assignment_8h.html#ad92e9cd00161b56a5ecbdafb9f8dc79f">More...</a><br /></td></tr>
+<tr class="separator:ad92e9cd00161b56a5ecbdafb9f8dc79f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Command variables. </p>
-<p>This contains all code pertaining to piping commands to/from the server. </p><dl class="section author"><dt>Author</dt><dd>Corbin Matschull </dd></dl>
-<dl class="section date"><dt>Date</dt><dd>Aug 30. 2015 </dd></dl>
-<dl class="section version"><dt>Version</dt><dd>0.1 </dd></dl>
-<dl class="section pre"><dt>Precondition</dt><dd>Use in conjunction with thread locking </dd></dl>
-<dl class="section warning"><dt>Warning</dt><dd>Make sure you take care not to overflow the buffer. </dd></dl>
+<div class="textblock"><p>Class assignment for changing internal functions. </p>
+<p>This takes current functions running and can access and modify members and active threads on the fly. </p><dl class="section author"><dt>Author</dt><dd>Corbin Matschull </dd></dl>
+<dl class="section version"><dt>Version</dt><dd>1.1r2 </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>Aug 28. 2015 </dd></dl>
+<dl class="section pre"><dt>Precondition</dt><dd>Must have at least one currently active (non-sleeping) thread to run </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">THREAD_NOT_FOUND_EXCEPTION</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
 <dl class="section copyright"><dt>Copyright</dt><dd>Apache Version 2 </dd></dl>
-</div><h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="a7ad8d1eabaac45a85ee1313a680b97fa"></a>
+</div><h2 class="groupheader">Enumeration Type Documentation</h2>
+<a class="anchor" id="ad92e9cd00161b56a5ecbdafb9f8dc79f"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void boost_vars </td>
-          <td>(</td>
-          <td class="paramtype">unsigned bool&#160;</td>
-          <td class="paramname"><em>has_static_boost</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="structcvar.html">cvar</a> *&#160;</td>
-          <td class="paramname"><em>vars</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="memname">enum <a class="el" href="class__assignment_8h.html#ad92e9cd00161b56a5ecbdafb9f8dc79f">CLASS_ASSIGNMENTS</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Used to boost privs in pipe. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">has_static_boost</td><td>- Create a static boost (can only modify privs once) </td></tr>
-    <tr><td class="paramname">vars</td><td>- accessor to cvar</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>Nothing </dd></dl>
+<p>Class assignment flags. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="ad92e9cd00161b56a5ecbdafb9f8dc79fa54b000a5f0fbf882206114794e539a6d"></a>CLASS_FORCE_ASSIGNMENT&#160;</td><td class="fielddoc">
+<p>Forces assignment to class </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ad92e9cd00161b56a5ecbdafb9f8dc79fac42907f65258f3b488a9177585b486c5"></a>CLASS_HAS_NO_ASSIGNMENT&#160;</td><td class="fielddoc">
+<p>Throws when class has no assignment </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ad92e9cd00161b56a5ecbdafb9f8dc79fa4cb7005b055f42b91a888b5ee65c9095"></a>CLASS_KEEPS_ASSIGNMENT&#160;</td><td class="fielddoc">
+<p>Keeps assignment under all costs </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ad92e9cd00161b56a5ecbdafb9f8dc79faf46794666b45af45f3267392d7bdf0d1"></a>CLASS_DUMP_ASSIGNMENT&#160;</td><td class="fielddoc">
+<p>Dumps under first sign of trouble </p>
+</td></tr>
+</table>
 
 </div>
 </div>

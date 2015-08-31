@@ -1,0 +1,64 @@
+\hypertarget{class__assignment_8h}{}\section{src/include/class\+\_\+assignment.h File Reference}
+\label{class__assignment_8h}\index{src/include/class\+\_\+assignment.\+h@{src/include/class\+\_\+assignment.\+h}}
+
+
+Class assignment for changing internal functions.  
+
+
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{class__assignment_8h_ad92e9cd00161b56a5ecbdafb9f8dc79f}{C\+L\+A\+S\+S\+\_\+\+A\+S\+S\+I\+G\+N\+M\+E\+N\+T\+S} \{ \hyperlink{class__assignment_8h_ad92e9cd00161b56a5ecbdafb9f8dc79fa54b000a5f0fbf882206114794e539a6d}{C\+L\+A\+S\+S\+\_\+\+F\+O\+R\+C\+E\+\_\+\+A\+S\+S\+I\+G\+N\+M\+E\+N\+T} = 0, 
+\hyperlink{class__assignment_8h_ad92e9cd00161b56a5ecbdafb9f8dc79fac42907f65258f3b488a9177585b486c5}{C\+L\+A\+S\+S\+\_\+\+H\+A\+S\+\_\+\+N\+O\+\_\+\+A\+S\+S\+I\+G\+N\+M\+E\+N\+T}, 
+\hyperlink{class__assignment_8h_ad92e9cd00161b56a5ecbdafb9f8dc79fa4cb7005b055f42b91a888b5ee65c9095}{C\+L\+A\+S\+S\+\_\+\+K\+E\+E\+P\+S\+\_\+\+A\+S\+S\+I\+G\+N\+M\+E\+N\+T}, 
+\hyperlink{class__assignment_8h_ad92e9cd00161b56a5ecbdafb9f8dc79faf46794666b45af45f3267392d7bdf0d1}{C\+L\+A\+S\+S\+\_\+\+D\+U\+M\+P\+\_\+\+A\+S\+S\+I\+G\+N\+M\+E\+N\+T}
+ \}\begin{DoxyCompactList}\small\item\em Class assignment flags. \end{DoxyCompactList}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class assignment for changing internal functions. 
+
+This takes current functions running and can access and modify members and active threads on the fly. \begin{DoxyAuthor}{Author}
+Corbin Matschull 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+1r2 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+Aug 28. 2015 
+\end{DoxyDate}
+\begin{DoxyPrecond}{Precondition}
+Must have at least one currently active (non-\/sleeping) thread to run 
+\end{DoxyPrecond}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em T\+H\+R\+E\+A\+D\+\_\+\+N\+O\+T\+\_\+\+F\+O\+U\+N\+D\+\_\+\+E\+X\+C\+E\+P\+T\+I\+O\+N} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyCopyright}{Copyright}
+Apache Version 2 
+\end{DoxyCopyright}
+
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{class__assignment_8h_ad92e9cd00161b56a5ecbdafb9f8dc79f}{}\index{class\+\_\+assignment.\+h@{class\+\_\+assignment.\+h}!C\+L\+A\+S\+S\+\_\+\+A\+S\+S\+I\+G\+N\+M\+E\+N\+T\+S@{C\+L\+A\+S\+S\+\_\+\+A\+S\+S\+I\+G\+N\+M\+E\+N\+T\+S}}
+\index{C\+L\+A\+S\+S\+\_\+\+A\+S\+S\+I\+G\+N\+M\+E\+N\+T\+S@{C\+L\+A\+S\+S\+\_\+\+A\+S\+S\+I\+G\+N\+M\+E\+N\+T\+S}!class\+\_\+assignment.\+h@{class\+\_\+assignment.\+h}}
+\subsubsection[{C\+L\+A\+S\+S\+\_\+\+A\+S\+S\+I\+G\+N\+M\+E\+N\+T\+S}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf C\+L\+A\+S\+S\+\_\+\+A\+S\+S\+I\+G\+N\+M\+E\+N\+T\+S}}\label{class__assignment_8h_ad92e9cd00161b56a5ecbdafb9f8dc79f}
+
+
+Class assignment flags. 
+
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{C\+L\+A\+S\+S\+\_\+\+F\+O\+R\+C\+E\+\_\+\+A\+S\+S\+I\+G\+N\+M\+E\+N\+T@{C\+L\+A\+S\+S\+\_\+\+F\+O\+R\+C\+E\+\_\+\+A\+S\+S\+I\+G\+N\+M\+E\+N\+T}!class\+\_\+assignment.\+h@{class\+\_\+assignment.\+h}}\index{class\+\_\+assignment.\+h@{class\+\_\+assignment.\+h}!C\+L\+A\+S\+S\+\_\+\+F\+O\+R\+C\+E\+\_\+\+A\+S\+S\+I\+G\+N\+M\+E\+N\+T@{C\+L\+A\+S\+S\+\_\+\+F\+O\+R\+C\+E\+\_\+\+A\+S\+S\+I\+G\+N\+M\+E\+N\+T}}\item[{\em 
+\hypertarget{class__assignment_8h_ad92e9cd00161b56a5ecbdafb9f8dc79fa54b000a5f0fbf882206114794e539a6d}{}C\+L\+A\+S\+S\+\_\+\+F\+O\+R\+C\+E\+\_\+\+A\+S\+S\+I\+G\+N\+M\+E\+N\+T\label{class__assignment_8h_ad92e9cd00161b56a5ecbdafb9f8dc79fa54b000a5f0fbf882206114794e539a6d}
+}]Forces assignment to class \index{C\+L\+A\+S\+S\+\_\+\+H\+A\+S\+\_\+\+N\+O\+\_\+\+A\+S\+S\+I\+G\+N\+M\+E\+N\+T@{C\+L\+A\+S\+S\+\_\+\+H\+A\+S\+\_\+\+N\+O\+\_\+\+A\+S\+S\+I\+G\+N\+M\+E\+N\+T}!class\+\_\+assignment.\+h@{class\+\_\+assignment.\+h}}\index{class\+\_\+assignment.\+h@{class\+\_\+assignment.\+h}!C\+L\+A\+S\+S\+\_\+\+H\+A\+S\+\_\+\+N\+O\+\_\+\+A\+S\+S\+I\+G\+N\+M\+E\+N\+T@{C\+L\+A\+S\+S\+\_\+\+H\+A\+S\+\_\+\+N\+O\+\_\+\+A\+S\+S\+I\+G\+N\+M\+E\+N\+T}}\item[{\em 
+\hypertarget{class__assignment_8h_ad92e9cd00161b56a5ecbdafb9f8dc79fac42907f65258f3b488a9177585b486c5}{}C\+L\+A\+S\+S\+\_\+\+H\+A\+S\+\_\+\+N\+O\+\_\+\+A\+S\+S\+I\+G\+N\+M\+E\+N\+T\label{class__assignment_8h_ad92e9cd00161b56a5ecbdafb9f8dc79fac42907f65258f3b488a9177585b486c5}
+}]Throws when class has no assignment \index{C\+L\+A\+S\+S\+\_\+\+K\+E\+E\+P\+S\+\_\+\+A\+S\+S\+I\+G\+N\+M\+E\+N\+T@{C\+L\+A\+S\+S\+\_\+\+K\+E\+E\+P\+S\+\_\+\+A\+S\+S\+I\+G\+N\+M\+E\+N\+T}!class\+\_\+assignment.\+h@{class\+\_\+assignment.\+h}}\index{class\+\_\+assignment.\+h@{class\+\_\+assignment.\+h}!C\+L\+A\+S\+S\+\_\+\+K\+E\+E\+P\+S\+\_\+\+A\+S\+S\+I\+G\+N\+M\+E\+N\+T@{C\+L\+A\+S\+S\+\_\+\+K\+E\+E\+P\+S\+\_\+\+A\+S\+S\+I\+G\+N\+M\+E\+N\+T}}\item[{\em 
+\hypertarget{class__assignment_8h_ad92e9cd00161b56a5ecbdafb9f8dc79fa4cb7005b055f42b91a888b5ee65c9095}{}C\+L\+A\+S\+S\+\_\+\+K\+E\+E\+P\+S\+\_\+\+A\+S\+S\+I\+G\+N\+M\+E\+N\+T\label{class__assignment_8h_ad92e9cd00161b56a5ecbdafb9f8dc79fa4cb7005b055f42b91a888b5ee65c9095}
+}]Keeps assignment under all costs \index{C\+L\+A\+S\+S\+\_\+\+D\+U\+M\+P\+\_\+\+A\+S\+S\+I\+G\+N\+M\+E\+N\+T@{C\+L\+A\+S\+S\+\_\+\+D\+U\+M\+P\+\_\+\+A\+S\+S\+I\+G\+N\+M\+E\+N\+T}!class\+\_\+assignment.\+h@{class\+\_\+assignment.\+h}}\index{class\+\_\+assignment.\+h@{class\+\_\+assignment.\+h}!C\+L\+A\+S\+S\+\_\+\+D\+U\+M\+P\+\_\+\+A\+S\+S\+I\+G\+N\+M\+E\+N\+T@{C\+L\+A\+S\+S\+\_\+\+D\+U\+M\+P\+\_\+\+A\+S\+S\+I\+G\+N\+M\+E\+N\+T}}\item[{\em 
+\hypertarget{class__assignment_8h_ad92e9cd00161b56a5ecbdafb9f8dc79faf46794666b45af45f3267392d7bdf0d1}{}C\+L\+A\+S\+S\+\_\+\+D\+U\+M\+P\+\_\+\+A\+S\+S\+I\+G\+N\+M\+E\+N\+T\label{class__assignment_8h_ad92e9cd00161b56a5ecbdafb9f8dc79faf46794666b45af45f3267392d7bdf0d1}
+}]Dumps under first sign of trouble \end{description}
+\end{Desc}

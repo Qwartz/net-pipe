@@ -16,7 +16,6 @@
 #   define  CALL_HEAP_FROM_ENG 0x02E
 #endif
 
-
 /**
  * \brief Used for detailing command variables.
  * \details This contains all the command variables for sending commands to/from the pipe.
@@ -26,5 +25,17 @@ struct cvar
     bool hasNoVars; /**<  Use this when concerened about sending explicitly 0 variables to/from the pipe */
    unsigned int cvars[]; /**< Array of variables */
 };
+
+/**
+ * \brief Used to boost privs in pipe
+ *
+ * \param has_static_boost - Create a static boost (can only modify privs once)
+ * \param vars - accessor to cvar
+ *
+ * \return Nothing
+ */
+void boost_vars(unsigned bool has_static_boost, cvar *vars);
+
+
 
 #endif
