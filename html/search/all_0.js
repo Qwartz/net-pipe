@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['delete_5fcrc',['delete_crc',['../pipe_8h.html#acb47efcaf1c1091f225577b7c42b4815',1,'pipe.h']]]
+  ['convars_2eh',['convars.h',['../convars_8h.html',1,'']]],
+  ['cvar',['cvar',['../structcvar.html',1,'']]],
+  ['cvars',['cvars',['../structcvar.html#a6b96a66add0508c54c72b8b4e02ee3e7',1,'cvar']]]
 ];
